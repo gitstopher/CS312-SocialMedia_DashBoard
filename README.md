@@ -10,8 +10,8 @@ A full-stack React + Node.js dashboard for managing social media activity, analy
 Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v18+ recommended)
-- npm (comes with Node)
-- Git (optional, for version control)
+- npm 
+- Git 
 
 ---
 
