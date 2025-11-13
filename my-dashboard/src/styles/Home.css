@@ -1,0 +1,30 @@
+.home-container {
+  font-family: sans-serif;
+}
+
+.home-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.activity-section,
+.analytics-section {
+  width: 48%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.analytics-overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metric {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 30%;
+  text-align: center;
+}
