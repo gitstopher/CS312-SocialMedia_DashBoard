@@ -27,6 +27,10 @@ cd CS312-SocialMedia_DashBoard
 cd my-dashboard
 npm install
 npm start
+
+### 3. run backend site
+cd backend
+npm install npm start 
 ```
 This will launch the app at http://localhost:3000
 
