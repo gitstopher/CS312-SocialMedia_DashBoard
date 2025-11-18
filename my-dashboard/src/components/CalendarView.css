@@ -1,0 +1,15 @@
+.calendar-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.react-calendar {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

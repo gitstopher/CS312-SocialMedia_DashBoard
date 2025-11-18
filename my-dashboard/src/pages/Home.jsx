@@ -1,20 +1,24 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import ActivityFeed from '../components/ActivityFeed';
 import AnalyticsOverview from '../components/AnalyticsOverview';
+import CalendarView from '../components/CalendarView';
 import '../styles/Home.css';
 
 const Home = () => (
   <div className="home-container">
-    <Navbar />
+    <h1>Hello Dashboard</h1>
+
     <main className="home-main">
       <section className="activity-section">
-        <h2>Activity Feed</h2>
         <ActivityFeed />
       </section>
-      <section className="analytics-section">
+
+      <section className="analytics-calendar-section">
         <h2>Quick Analytics Overview</h2>
         <AnalyticsOverview />
+
+        <h2>Post Scheduling Calendar</h2>
+        <CalendarView />
       </section>
     </main>
   </div>

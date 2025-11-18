@@ -1,18 +1,17 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="navbar">
     <h1>Social Dashboard</h1>
     <ul className="nav-links">
-       
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/login">Login</Link></li>
-    <li><Link to="/signup">Sign Up</Link></li>
-    <li><Link to="/settings">Settings</Link></li>
-    <li><Link to="/schedule">Schedule</Link></li>
-    <li><Link to="/analytics">Analytics</Link></li>
+      <li><NavLink to="/" end>Home</NavLink></li>
+      <li><NavLink to="/login">Login</NavLink></li>
+      <li><NavLink to="/signup">Sign Up</NavLink></li>
+      <li><NavLink to="/settings">Settings</NavLink></li>
+      <li><NavLink to="/schedule">Schedule</NavLink></li>
+      <li><NavLink to="/analytics">Analytics</NavLink></li>
     </ul>
   </nav>
 );
