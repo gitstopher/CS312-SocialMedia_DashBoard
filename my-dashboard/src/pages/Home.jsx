@@ -8,8 +8,8 @@ const Home = () => {
   const [filter, setFilter] = useState('all');
 
   const posts = [
-    { type: 'instagram', content: ' New photo from our campaign!' },
-    { type: 'twitter', content: ' Exciting update from our team!' },
+    { type: 'instagram', content: ' insta post: test' },
+    { type: 'twitter', content: ' twitter(x) post: test' },
     { type: 'video', content: ' Product demo reel uploaded.' },
     { type: 'reel', content: ' Behind the scenes reel.' },
     { type: 'facebook', content: ' Facebook post: Community event update.' },
