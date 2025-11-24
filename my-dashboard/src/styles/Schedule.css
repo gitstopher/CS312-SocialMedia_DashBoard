@@ -59,6 +59,7 @@
 .schedule-form textarea {
   height: 100px;
   resize: vertical;
+  font-style: italic;
 }
 
 /* Button styling */

@@ -14,13 +14,6 @@ const Settings = () => {
     darkMode: false,
   });
 
-  const toggleAccount = (platform) => {
-    setLinkedAccounts({
-      ...linkedAccounts,
-      [platform]: !linkedAccounts[platform],
-    });
-  };
-
   const togglePreference = (pref) => {
     setPreferences({
       ...preferences,
@@ -44,34 +37,19 @@ const Settings = () => {
       <div className="settings-card">
         <h3>Linked Accounts</h3>
         <div className="account-toggle">
-          <label>
-            <input
-              type="checkbox"
-              checked={linkedAccounts.facebook}
-              onChange={() => toggleAccount('facebook')}
-            />
-            Facebook
-          </label>
+          <button className="link-button">
+            {linkedAccounts.facebook ? 'Unlink Facebook' : 'Link Facebook'}
+          </button>
         </div>
         <div className="account-toggle">
-          <label>
-            <input
-              type="checkbox"
-              checked={linkedAccounts.twitter}
-              onChange={() => toggleAccount('twitter')}
-            />
-            Twitter
-          </label>
+          <button className="link-button">
+            {linkedAccounts.twitter ? 'Unlink Twitter' : 'Link Twitter'}
+          </button>
         </div>
         <div className="account-toggle">
-          <label>
-            <input
-              type="checkbox"
-              checked={linkedAccounts.instagram}
-              onChange={() => toggleAccount('instagram')}
-            />
-            Instagram
-          </label>
+          <button className="link-button">
+            {linkedAccounts.instagram ? 'Unlink Instagram' : 'Link Instagram'}
+          </button>
         </div>
       </div>
 

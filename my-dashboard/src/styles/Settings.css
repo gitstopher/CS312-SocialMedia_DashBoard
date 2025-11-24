@@ -4,6 +4,7 @@
   min-height: 100vh;
 }
 
+/* Navbar */
 .settings-navbar {
   position: fixed;
   top: 20px;
@@ -21,11 +22,13 @@
   color: #33334d;
 }
 
+/* Header */
 .settings-header {
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* Card layout */
 .settings-card {
   background: white;
   padding: 20px;
@@ -39,12 +42,31 @@
   color: #1e1e2f;
 }
 
+/* Toggle sections */
 .account-toggle,
 .pref-toggle {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
+/* Label styling */
 label {
   font-weight: 500;
   color: #333;
+}
+
+/* Link button styling */
+.link-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #33334d;
 }
