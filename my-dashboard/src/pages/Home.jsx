@@ -6,6 +6,7 @@ import '../styles/Home.css';
 
 const Home = () => {
   const [filter, setFilter] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
 
   const posts = [
     { type: 'instagram', content: ' insta post: test' },
@@ -22,11 +23,11 @@ const Home = () => {
     <div className="home-container">
       <Navbar />
       <main className="home-main">
-        <section className="activity-section">
+        <section className="dashboard-card activity-section">
           <h2>Activity Feed</h2>
           <ActivityFeed />
         </section>
-        <section className="analytics-section">
+        <section className="dashboard-card analytics-section">
           <h2>Quick Analytics Overview</h2>
           <AnalyticsOverview />
         </section>
@@ -35,7 +36,13 @@ const Home = () => {
       {/* Social Feed Card */}
       <section className="social-feed-card">
         <h2>Social Media Feed</h2>
-        <div className="filter-buttons">
+
+        {/* Toggle button for small screens */}
+        <button className="filter-toggle" onClick={() => setShowFilters(!showFilters)}>
+          {showFilters ? 'Hide Filters' : 'Show Filters'}
+        </button>
+
+        <div className={`filter-buttons ${showFilters ? 'visible' : ''}`}>
           <button onClick={() => setFilter('all')}>All</button>
           <button onClick={() => setFilter('instagram')}>Instagram</button>
           <button onClick={() => setFilter('twitter')}>Twitter</button>
@@ -43,6 +50,7 @@ const Home = () => {
           <button onClick={() => setFilter('reel')}>Reels</button>
           <button onClick={() => setFilter('facebook')}>Facebook</button>
         </div>
+
         <div className="feed-list">
           {filteredPosts.length === 0 ? (
             <p>No posts available for this filter.</p>

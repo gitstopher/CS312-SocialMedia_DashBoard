@@ -44,7 +44,7 @@ const Analytics = () => {
 
       <div className="analytics-header">
         <h2>Analytics Dashboard</h2>
-        <p>Detailed insights for each social media account</p>
+        <p>Detailed insights for all social media account!</p>
       </div>
 
       <div className="analytics-grid">
