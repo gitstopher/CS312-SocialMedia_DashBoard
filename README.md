@@ -1,7 +1,6 @@
 # CS312 Social Media Dashboard
 
-A full-stack React + Node.js dashboard for managing social media activity, analytics, and scheduling. Built for CS-312 coursework.
-
+A full-stack React + Node.js dashboard for managing social media activity, analytics, and scheduling. 
 ---
 
 ### Setup

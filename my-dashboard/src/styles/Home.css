@@ -2,29 +2,147 @@
   font-family: sans-serif;
 }
 
+/* Main layout: flex row on large screens, wraps on smaller */
 .home-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
-.activity-section,
-.analytics-section {
-  width: 48%;
+
+.dashboard-card {
+  flex: 1;
+  min-width: 360px;
+  max-width: 500px;
   background-color: #f4f4f4;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Responsive: stack cards vertically on narrow screens */
+@media (max-width: 768px) {
+  .home-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+/* Analytics overview metrics inside its card */
 .analytics-overview {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .metric {
   background: white;
   padding: 10px;
   border-radius: 6px;
-  width: 30%;
+  flex: 1;
+  min-width: 100px;
   text-align: center;
+}
+
+/* Social feed card styling */
+.social-feed-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 30px auto;
+  width: 80%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.social-feed-card h2 {
+  margin-bottom: 15px;
+  color: #1e1e2f;
+}
+
+/* Filter toggle button for small screens */
+.filter-toggle {
+  display: none;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background-color: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e1e2f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #33334d;
+}
+
+/* Feed list */
+.feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feed-item {
+  background-color: #f4f6f8;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* Responsive filter behavior */
+@media (max-width: 768px) {
+
+
+  .filter-toggle {
+    display: block;
+  }
+
+  .filter-buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-buttons.visible {
+    display: flex;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 8px;
+  }
+
+  .social-feed-card {
+    width: 100%;
+    max-width: 90%;
+  }
 }
