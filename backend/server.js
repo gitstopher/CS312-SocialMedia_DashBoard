@@ -4,6 +4,10 @@ import dotenv from 'dotenv';
 import socialRoutes from './routes/socialRoutes.js';
 import activityRoutes from './routes/activityRoutes.js';
 import oauthRoutes from './routes/oauthRoutes.js';
+import analyticsRoutes from "./routes/analyticsRoutes.js";
+import scheduleRoutes from "./routes/scheduleRoutes.js";
+import './utils/scheduler.js';
+
 
 dotenv.config();
 
@@ -15,6 +19,8 @@ app.use(express.json());
 app.use('/api/social', socialRoutes);
 app.use('/api/activity', activityRoutes);
 app.use('/api/oauth', oauthRoutes);
+app.use("/api/analytics", analyticsRoutes);
+app.use("/api/schedule", scheduleRoutes);
 
 app.get('/', (req, res) => res.send('Backend API running...'));
 
