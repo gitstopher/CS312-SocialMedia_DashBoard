@@ -38,11 +38,14 @@ const Signup = () => {
       const data = await res.json();
 
       if (res.ok) {
-        // Store JWT for authenticated requests
+        // 1. Store JWT for API calls
         localStorage.setItem("token", data.token);
 
-        // Redirect to dashboard (or social linking page)
-        navigate("/");
+        // 2. Store User Info for the Navbar (THIS WAS MISSING!)
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        // 3. Redirect to Settings to start linking accounts
+        navigate("/settings");
       } else {
         setError(data.message || "Signup failed");
       }
