@@ -1,0 +1,15 @@
+{
+  "name": "cs312-socialmedia_dashboard",
+  "version": "1.0.0",
+  "description": "A full-stack React + Node.js dashboard for managing social media activity, analytics, and scheduling. \r ---",
+  "main": "index.js",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+ "scripts": {
+  "start": "concurrently \"npm start --prefix backend\" \"npm start --prefix my-dashboard\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
